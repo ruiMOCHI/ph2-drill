@@ -1,7 +1,7 @@
 <?php
 
-$host = ""; #ここにhostを指定する
-$dbname = "posse";
+$host = "db"; #ここにhostを指定する
+$dbname = "ph2drill";
 $user = "root";
 $password = "password";
 

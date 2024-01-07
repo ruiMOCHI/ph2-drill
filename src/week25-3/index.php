@@ -7,10 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-  <?= ??? ?>
+  <? echo $_POST["keyword"]; ?> 
   <form action="./index.php" method="POST">
     <input type="text" name="keyword">
     <button type='submit'>submit</button>
   </form>
 </body>
-</html>
+</html> <!--inputのname属性とスーパーグローバル変数の[]の中を合わせる-->

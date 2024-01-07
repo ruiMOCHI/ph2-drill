@@ -52,9 +52,23 @@ try {
     });
     google.charts.setOnLoadCallback(function() {
         const data = new google.visualization.DataTable();
-        data.addColumn('?', 'hoge date');
-        data.addColumn('?', 'fuga hours');
-        data.addRows( ? );
+        data.addColumn('string', 'hoge date');//?を'string'に変更
+        data.addColumn('number', 'fuga hours');//?を'number'に変更
+        data.addRows([           //ph2drillのstudiesテーブルを参照して配列を埋め込む
+            ['2022-06-14 00:00:00', 3],
+            ['2022-06-15 00:00:00', 7],
+            ['2022-06-16 00:00:00', 3],
+            ['2022-06-17 00:00:00', 7],
+            ['2022-06-18 00:00:00', 3],
+            ['2022-06-19 00:00:00', 7],
+            ['2022-06-20 00:00:00', 3],
+            ['2022-06-21 00:00:00', 7],
+            ['2022-06-22 00:00:00', 3],
+            ['2022-06-27 00:00:00', 4],
+            ['2022-06-28 00:00:00', 3],
+            ['2022-06-29 00:00:00', 7],
+            ['2022-06-30 00:00:00', 3],
+        ]);
         const chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
         chart.draw(data, {
             title: '日毎の学習時間'

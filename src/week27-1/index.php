@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-  <?= ???("<script>alert('hoge')</script>") ?>
+  <?= htmlspecialchars("<script>alert('hoge')</script>") ?> <!--???をhtmlspecialcharsに変更-->
 </body>
 </html>

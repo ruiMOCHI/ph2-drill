@@ -8,6 +8,6 @@
     <title>Document</title>
 </head>
 <body>
-  <?= ??? ?>
+  <?= $_COOKIE['key'] ?> <!-- ???を$_COOKIE['key']に変更-->
 </body>
 </html>

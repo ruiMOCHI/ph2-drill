@@ -1,7 +1,7 @@
 <?php
     session_start();
-    # nameというkeyに、POSSEという値をセットする
-?>
+    $_SESSION['name'] = 'POSSE';  # nameというkeyに、POSSEという値をセットする
+?>  <!-- $_SESSION['key名'] = 値(value,文字列なら''か""をつける); -->
 <!DOCTYPE html>
 <html lang="en">
 <head>

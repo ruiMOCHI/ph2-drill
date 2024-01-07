@@ -4,7 +4,7 @@
 
 学生名、日付ごとの学習時間を算出してください
 
-`select students.name 学生名, ? 学習日, sum(studies.hours) 日毎の学習時間 from students join studies on studies.student_id = students.id group by 学習日, name;`
+`select students.name 学生名, ? 学習日, sum(studies.hours) 日毎の学習時間 from students join studies on studies.student_id = students.id group by 学習日, name;`    ?をdateに変更
 上記sqlの?部分に適切な処理を入れてください
 
 ### 終了条件

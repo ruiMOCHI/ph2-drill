@@ -30,7 +30,12 @@ try {
     );
     $sql = "SELECT DATE_FORMAT(studies.date, '%Y-%m-%d') day, sum(studies.hours) hours FROM studies group by day";
     $studies = $pdo->query($sql)->fetchAll(\PDO::FETCH_CLASS, Study::class);
-    $formatted_study_data = array_map(?, ?);
+    $formatted_study_data = array_map(function($study) {
+        return array(
+            'day' => $study->get_day(),
+            'hours' => $study->get_hours()
+        );
+    }, $studies);
     $chart_data = json_encode($formatted_study_data);
     print_r($chart_data);
 } catch (PDOException $e) {

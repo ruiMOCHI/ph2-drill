@@ -29,7 +29,7 @@ try {
     echo("テーブル作成成功") . PHP_EOL;
 
     # ???に適切に埋め込んでください
-    $sql = 'insert into people (name, age, created_at, updated_at) values (???)';
+    $sql = 'insert into people (name, age, created_at, updated_at) values (:name, :age, :created_at, :updated_at)';
     $query = $pdo->prepare($sql);
     $query->bindValue(':name', "name", PDO::PARAM_STR);
     $query->bindValue(':age', 20, PDO::PARAM_INT);
@@ -38,5 +38,5 @@ try {
     $query->execute();
 	echo("insert成功") . PHP_EOL;
 } catch (PDOException $e) {
-    exit($e->getMessage()); 
+    exit("エラー: " . $e->getMessage()); 
 }

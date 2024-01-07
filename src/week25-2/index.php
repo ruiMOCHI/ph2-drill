@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-  <?= ??? ?>
+  <? echo htmlspecialchars($_GET["keyword"]); ?>
 </body>
 </html>

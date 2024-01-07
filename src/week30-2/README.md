@@ -4,7 +4,7 @@
 
 学生名、週毎ごとの学習時間を算出してください
 
-`select students.name 学生名, ? 学習週, sum(studies.hours) 週ごとの学習時間 from students join studies on studies.student_id = students.id group by 学習週, name;`
+`select students.name 学生名, ? 学習週, sum(studies.hours) 週ごとの学習時間 from students join studies on studies.student_id = students.id group by 学習週, name;`    ?にdate_format(studies.date, '%x-%v')を入れる
 上記sqlの?部分に適切な処理を入れてください
 
 ### 終了条件
